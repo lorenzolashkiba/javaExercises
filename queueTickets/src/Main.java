@@ -3,11 +3,15 @@ public class Main {
     public static void main(String[] arg){
 
         Queue e = new Queue(5);
-        for (int i = 0; i < e.human.length; i++) {
-            e.queue(new Human("nome"+i,"cognom"+i,1+i));
-        }
+
+        e.queue(new Human("nome1","cognom1",1));
         System.out.println(e);
-        e.yourTurn();
+        e.queue(new Human("nome2","cognom2",2));
+        e.queue(new Human("nome2","cognom2",3));
+        e.queue(new Human("nome2","cognom2",2));
+        e.queue(new Human("nome2","cognom2",4));
         System.out.println(e);
+
+
     }
 }

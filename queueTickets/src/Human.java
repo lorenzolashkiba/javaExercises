@@ -23,8 +23,8 @@ public class Human {
         this.tickets = tickets;
     }
 
-    public boolean compareTo(){
+    public int compareTo(Human h){
 
-        return true;
+        return Integer.compare(getTickets(),h.getTickets());
     }
 }
