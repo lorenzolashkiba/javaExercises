@@ -35,7 +35,14 @@ public class Negozio {
             return a;
         }else return quaderni;
     }
-
+    public synchronized void buy(int matite,int quaderni){
+        takeQuaderno(quaderni);
+        takeMatita(matite);
+    }
+    public synchronized void rifornisci(int matite,int quaderni){
+        setQuaderni(quaderni+getQuaderni());
+        setMatite(matite+getMatite());
+    }
     public void setMatite(int matite) {
         this.matite = matite;
     }

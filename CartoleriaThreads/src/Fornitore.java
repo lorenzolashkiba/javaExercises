@@ -6,13 +6,12 @@ public class Fornitore implements Runnable {
      }
 
     @Override
-    public void run() {
+    public synchronized void run() {
 
         while (true) {
             try {
                 Thread.sleep(4000);
-                negozio.setMatite(negozio.getMatite()+100);
-                negozio.setQuaderni(negozio.getQuaderni()+50);
+                negozio.rifornisci(100,50);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

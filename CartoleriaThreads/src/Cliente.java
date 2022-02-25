@@ -6,17 +6,17 @@ public class Cliente extends Thread{
     }
 
     @Override
-    public void run() {
+    public synchronized void run() {
 
         while (true) {
             try {
                 Thread.sleep( 1000);
-                negozio.takeMatita(10);
-                negozio.takeQuaderno(5);
+                negozio.buy(10,5);
                 System.out.println(negozio);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+
         }
     }
 }
