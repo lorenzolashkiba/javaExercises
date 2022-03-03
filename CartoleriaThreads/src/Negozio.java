@@ -1,5 +1,3 @@
-
-
 public class Negozio {
     int matite;
     int quaderni;
